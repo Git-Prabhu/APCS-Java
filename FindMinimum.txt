@@ -1,0 +1,34 @@
+public class FindMinimum extends ConsoleProgram
+{
+    public void run()
+    {
+        int firstInt = readInt ("First number " );
+        int secondInt = readInt ("Second number ");
+        int thirdInt = readInt ("Third number ");
+        
+        int largest = 0, smallest = 0;
+        
+        if (firstInt > secondInt)
+        {
+            largest = firstInt;
+            smallest = secondInt;
+        }
+        else
+        {
+            largest = secondInt;
+            smallest = firstInt;
+        }
+        
+        if (thirdInt > largest)
+        {
+            largest = thirdInt;
+        }
+        else 
+        {
+            smallest = thirdInt;
+        }
+        
+        System.out.println (smallest);
+    }
+    
+}

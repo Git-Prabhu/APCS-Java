@@ -1,0 +1,52 @@
+public class SuperCleanupKarel extends SuperKarel
+{
+    public void run()
+    {
+        while (frontIsClear())
+        {
+            if (ballsPresent())
+            {
+                takeBall();
+            }
+            moveToWall();
+            
+            if (frontIsBlocked())
+            {
+                rowUp();
+            }
+        }
+    }
+    
+    private void rowUp()
+    {
+        if (frontIsBlocked())
+        {
+            turnLeft();
+        }
+            if (frontIsBlocked())
+            {
+               turnLeft();
+            }
+        move();    
+        turnLeft();
+	    if (frontIsClear())
+	    {
+	        moveToWall();
+	        turnAround();    
+	    }
+
+    }
+    
+    private void moveToWall()
+    {
+        while (frontIsClear())
+        {
+            move();
+            
+            if (ballsPresent())
+            {
+                takeBall();
+            }
+        }
+    }
+}

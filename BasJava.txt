@@ -1,0 +1,89 @@
+int firstInt = readInt("First Int: ");
+        int secondInt = readInt("Second Int: ");
+        double division = (double)firstInt/secondInt;
+        System.out.println(division);
+
+
+
+
+  double myDouble = readDouble("Please input your double: ");
+        System.out.println((int)myDouble);
+
+
+
+public class GradeRange extends ConsoleProgram
+{
+    public void run()
+    {
+        int grade = readInt("What was your grade? ");
+	    boolean gotB = grade >= 80 && grade < 90;
+	    System.out.println("Got a B: " + gotB);  
+    }
+}
+
+
+
+public class Countdown extends ConsoleProgram
+{
+    // This program prints a countdown from
+    // 100 down to 0 using a for loop.
+    public void run()
+    {
+        System.out.println("Countdown");
+        for (int i = 100; i >= 0; i--)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+
+
+public class CountByTwos extends ConsoleProgram
+{
+    public void run()
+    {
+    	for(int i = 0; i <= 100; i += 10)
+    	{
+		    System.out.println(i);
+    	}
+	}  
+}
+
+
+
+public class ForLoopSum extends ConsoleProgram
+{
+    // These variables are called constants.
+    // We'll talk more about these later.
+
+    private static final int MIN = 1;
+    private static final int MAX = 1000;
+    
+    public void run()
+    {
+        int sum = 0;
+    	for(int i = MIN; i <= MAX; i++)
+    	{
+    		sum += i;
+    	}
+    	
+    	System.out.println(sum);
+    }
+}
+
+
+
+public class NegativeNumbers extends ConsoleProgram
+{
+    // This program reads a number from the
+    // user and prints if it is negative.
+    public void run()
+    {
+        int number = readInt("Number: ");
+        if (number < 0)
+        {
+            System.out.println("Number is negative");
+        }
+    }
+}

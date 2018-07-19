@@ -1,0 +1,36 @@
+/*
+ * Has the user input several completion times for running
+ * a 40 yard dash and computes the average time.
+ */
+public class RunningAverage extends ConsoleProgram
+{
+    public void run()
+    {
+        double SENTINEL = -1;
+        
+       
+        int numInputs = 0;
+        double totalTime = 0;
+        
+       
+        while(true)
+        {
+       
+            double time = readDouble("Input your 40 yard dash time (-1 to stop): ");
+            
+       
+            if(time == SENTINEL)
+            {
+                break;    
+            }
+            
+       
+            numInputs++;
+            totalTime += time;
+        }
+        
+       
+        double average = totalTime / numInputs;
+        System.out.println("Average 40 yard dash time: " + average + " seconds.");
+    }
+}
